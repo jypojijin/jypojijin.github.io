@@ -114,12 +114,12 @@ $(function () {
 
 $(document).ready(function () {
     $('a[href^="#"]').on('click', function (event) {
-        event.preventDefault(); // 기본 링크 동작 방지
-        var target = $(this.getAttribute('href')); // 이동할 위치
+        event.preventDefault(); 
+        var target = $(this.getAttribute('href')); 
         if (target.length) {
             $('html, body').animate({
                 scrollTop: target.offset().top
-            }, 500); // 500ms 동안 스크롤
+            }, 500);
         }
     });
 });
