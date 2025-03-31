@@ -110,17 +110,83 @@ $(function () {
         $('.modal4').css('display', 'none');
     })
 
-});
 
-$(document).ready(function () {
-    $('a[href^="#"]').on('click', function (event) {
-        event.preventDefault(); 
-        var target = $(this.getAttribute('href')); 
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 500);
-        }
+    $(document).ready(function () {
+        $('a[href^="#"]').on('click', function (event) {
+            event.preventDefault();
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 500);
+            }
+        });
     });
-});
 
+    $(".cake2>ul>li>img").click(function () {
+        $(this).css("scale", "2")
+        $(this).css("position", "relative")
+        $(this).css("z-index", "100")
+    })
+    $(".cake2>ul>li>img").mouseleave(function () {
+        $(this).css("scale", "1")
+        $(this).css("position", "relative")
+        $(this).css("z-index", "1")
+    })
+
+
+
+   // 이미지를 변경하는 첫 번째 함수 (mouseover 이벤트용)
+        function changeImage() {
+            let imgElements = document.getElementsByClassName("cake3");
+            for (let i = 0; i < imgElements.length; i++) {
+                let img = imgElements[i];
+                // 현재 이미지 src에서 파일명 추출
+                let currentSrc = img.src.substring(img.src.lastIndexOf('/') + 1);
+                
+                // 현재 이미지가 'Asset 5.png'인 경우만 변경
+                if (currentSrc === "Asset%205.png" || currentSrc === "Asset 5.png") {
+                    img.src = "images/cake/Asset 112.png";
+                }
+                // 다른 이미지들은 그대로 유지
+            }
+        }
+        
+        // 이미지를 변경하는 두 번째 함수 (click 이벤트용)
+        function changeImage2() {
+            let imgElements = document.getElementsByClassName("cake3");
+            for (let i = 0; i < imgElements.length; i++) {
+                let img = imgElements[i];
+                // 현재 이미지 src에서 파일명 추출
+                let currentSrc = img.src.substring(img.src.lastIndexOf('/') + 1);
+                
+                // 현재 이미지에 따라 다음 이미지로 변경
+                if (currentSrc === "Asset%20112.png" || currentSrc === "Asset 112.png") {
+                    img.src = "images/cake/Asset 115.png";
+                } else if (currentSrc === "Asset%20115.png" || currentSrc === "Asset 115.png") {
+                    img.src = "images/cake/Asset 5.png";
+                }
+                // Asset 5.png인 경우는 mouseover 이벤트에서 처리하므로 여기서는 처리하지 않음
+            }
+        }
+        
+        // mouseleave 이벤트용 함수 - 모든 이미지를 Asset 5.png로 되돌림
+        function resetImage() {
+            let imgElements = document.getElementsByClassName("cake3");
+            for (let i = 0; i < imgElements.length; i++) {
+                imgElements[i].src = "images/cake/Asset 5.png";
+            }
+        }
+        
+        // 이미지에 이벤트 리스너 추가
+        var imgElements = document.getElementsByClassName("cake3");
+        // 각 이미지에 이벤트 리스너를 추가
+        for (let i = 0; i < imgElements.length; i++) {
+            // mouseover 이벤트 처리
+            imgElements[i].addEventListener("mouseover", changeImage);
+            // click 이벤트 처리
+            imgElements[i].addEventListener("click", changeImage2);
+            // mouseleave 이벤트 처리 - 마우스가 벗어날 때 Asset 5로 돌아감
+            imgElements[i].addEventListener("mouseleave", resetImage);
+        }
+});
