@@ -28,7 +28,7 @@ header {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 1000;
 }
 
 .nav nav ul {
@@ -256,7 +256,7 @@ footer {
 
 /* 효과 */
 #about {
-    height: 700px;
+    height: fit-content;
     transition: 1s;
     position: relative;
 }
@@ -290,18 +290,20 @@ footer {
     transition: 0.5s;
 }
 
-.modal1 {
+
+#modal {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 100px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
+    display: block;
     display: none;
 }
 
-.modal1 img {
+.modal img {
     position: absolute;
     left: 50%;
     top: 52%;
@@ -310,19 +312,7 @@ footer {
     width: 500px;
     height: 700px;
 }
-
-.modal2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    display: none;
-}
-
-.modal2 img {
+.moda2 img {
     position: absolute;
     left: 50%;
     top: 52%;
@@ -331,19 +321,7 @@ footer {
     width: 500px;
     height: 700px;
 }
-
-.modal3 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    display: none;
-}
-
-.modal3 img {
+.moda3 img {
     position: absolute;
     left: 50%;
     top: 52%;
@@ -352,19 +330,7 @@ footer {
     width: 500px;
     height: 700px;
 }
-
-.modal4 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    display: none;
-}
-
-.modal4 img {
+.moda4 img {
     position: absolute;
     left: 50%;
     top: 52%;
@@ -414,7 +380,7 @@ footer {
     }
 
     #about {
-        height: 1900px;
+        height: fit-content;
     }
 
     #slide {
@@ -441,11 +407,52 @@ footer {
         object-fit: cover;
     }
     .cake1{
-        width: 40%;
+        width: 50%;
     }
     .cake2{
-        width: 60%;
+        width: 50%;
         height: 520px;
         overflow: hidden;
     }
+  
+    .modal1 img {
+        position: absolute;
+        left: 50%;
+        bottom: 60%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 80%;
+
+    }
+    .modal2 img {
+        position: absolute;
+        left: 50%;
+        bottom: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 80%;
+
+    }
+    .modal3 img {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 80%;
+
+    }
+    .modal4 img {
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 80%;
+    }
+    
 }
