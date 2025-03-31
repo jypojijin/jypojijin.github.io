@@ -437,6 +437,8 @@ footer {
     }
     #project>img {
         width: 80%;
+        height: auto;
+        object-fit: cover;
     }
     .cake1{
         width: 40%;
