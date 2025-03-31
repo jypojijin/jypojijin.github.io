@@ -90,24 +90,31 @@ $(function () {
     })
     $('.modal1').click(function () {
         $('.modal1').css('display', 'none');
+
     })
     $('.btn2').click(function () {
         $('.modal2').css('display', 'block');
+
     })
     $('.modal2').click(function () {
         $('.modal2').css('display', 'none');
+
     })
     $('.btn3').click(function () {
         $('.modal3').css('display', 'block');
+
     })
     $('.modal3').click(function () {
         $('.modal3').css('display', 'none');
+
     })
     $('.btn4').click(function () {
         $('.modal4').css('display', 'block');
+
     })
     $('.modal4').click(function () {
         $('.modal4').css('display', 'none');
+
     })
 
 
