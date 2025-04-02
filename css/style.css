@@ -341,8 +341,13 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    body{
+        width: 100%;
+        box-sizing: border-box;
+    }
     .nav {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .nav>nav>ul>li {
@@ -352,6 +357,7 @@ footer {
     #home {
         width: 100%;
         height: 600px;
+        box-sizing: border-box;
     }
 
     #home h1 {
@@ -361,7 +367,10 @@ footer {
     #home p {
         font-size: 16px;
     }
-
+    #resume{
+        width: 100%;
+        box-sizing: border-box;
+    }
     .resume2-1>img {
         width: 100%;
     }
@@ -380,6 +389,8 @@ footer {
     }
 
     #about {
+        width: 100%;
+        box-sizing: border-box;
         height: fit-content;
     }
 
@@ -388,6 +399,7 @@ footer {
         height: 250px;
         overflow: hidden;
         margin-top: 150px;
+        box-sizing: border-box;
     }
 
     .slide {
@@ -395,16 +407,23 @@ footer {
     }
 
     #contact {
+        width: 100%;
+        box-sizing: border-box;
         font-size: 20px;
     }
 
     #project {
         width: 100%;
+        box-sizing: border-box;
     }
     #project>img {
         width: 80%;
         height: auto;
         object-fit: cover;
+    }
+    #cake{
+        width: 100%;
+        box-sizing: border-box;
     }
     .cake1{
         width: 50%;
@@ -423,7 +442,7 @@ footer {
     .web {
         position: absolute;
         left: 50%;
-        top: 20%;
+        top: 15%;
         transform: translate(-50%, -50%);
         z-index: 100;
         height: fit-content;
@@ -434,7 +453,7 @@ footer {
     .computer {
         position: absolute;
         left: 50%;
-        top: 40%;
+        top: 35%;
         z-index: 100;
         height: fit-content;
         width: 95%;
@@ -443,7 +462,7 @@ footer {
     .gtqi {
         position: absolute;
         left: 50%;
-        bottom: 20%;
+        bottom: 35%;
         transform: translate(-50%, -50%);
         z-index: 100;
         height: fit-content;
@@ -453,7 +472,7 @@ footer {
     .gtq {
         position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: 15%;
         transform: translate(-50%, -50%);
         z-index: 100;
         height: fit-content;
