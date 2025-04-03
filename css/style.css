@@ -219,6 +219,14 @@ section h2 {
 } */
 
 /* 슬라이더 */
+#slide{
+    width: 100vw;
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 150px;
+    background-color: #1d1d1f;
+    box-sizing: border-box;
+}
 .slider {
     display: flex;
     overflow: hidden;
@@ -252,7 +260,9 @@ section h2 {
 
 /* 푸터 */
 footer {
+    width: 100%;
     padding: 20px;
+    box-sizing: border-box;
     background-color: #1d1d1f;
     color: #eee;
     text-align: center;
@@ -444,6 +454,7 @@ footer {
     
     
     .slider {
+        width: 4000px;
         height: fit-content;
     }
 
@@ -455,7 +466,7 @@ footer {
     #contact {
         width: 100%;
         box-sizing: border-box;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     #project {
@@ -473,17 +484,19 @@ footer {
         width: 100%;
         box-sizing: border-box;
     }
-
+    
     .cake1 {
-        width: 45%;
+        width: 40%;
     }
 
     .cake2 {
-        width: 55%;
+        width: 60%;
         height: 520px;
         overflow: hidden;
     }
-
+    .cake3{
+        width: 100%;
+    }
     #about {
         position: relative;
         width: 100%;
@@ -531,5 +544,7 @@ footer {
         height: fit-content;
         width: 95%;
     }
+
+    
 
 }
