@@ -219,7 +219,7 @@ section h2 {
 } */
 
 /* 슬라이더 */
-#slide{
+#slide {
     width: 100vw;
     height: fit-content;
     overflow: hidden;
@@ -227,6 +227,7 @@ section h2 {
     background-color: #1d1d1f;
     box-sizing: border-box;
 }
+
 .slider {
     display: flex;
     overflow: hidden;
@@ -402,22 +403,30 @@ footer {
         width: 100%;
         box-sizing: border-box;
     }
+    #resume1{
+        display: block;
+    }
 
     #resume2 {
         width: 100%;
         box-sizing: border-box;
+        display: block;
     }
 
     .resume2-1 {
+        width: 90%;
+        margin: auto;
+        height: fit-content;
         background-color: #2f2f30;
     }
-
+    
     .resume2-1>img {
-        width: 100%;
+        width: 80%;
     }
 
     .resume2-2 {
-        padding: 10px;
+        width: 100%;
+        margin: 20px auto;
         box-sizing: border-box;
         height: fit-content;
 
@@ -431,7 +440,6 @@ footer {
     #resume3 {
         width: 100%;
         box-sizing: border-box;
-        padding: 10px;
         height: fit-content;
     }
 
@@ -451,8 +459,8 @@ footer {
         overflow: hidden;
         margin-top: 150px;
     }
-    
-    
+
+
     .slider {
         width: 4000px;
         height: fit-content;
@@ -484,7 +492,7 @@ footer {
         width: 100%;
         box-sizing: border-box;
     }
-    
+
     .cake1 {
         width: 40%;
     }
@@ -494,9 +502,11 @@ footer {
         height: 520px;
         overflow: hidden;
     }
-    .cake3{
+
+    .cake3 {
         width: 100%;
     }
+
     #about {
         position: relative;
         width: 100%;
@@ -545,6 +555,6 @@ footer {
         width: 95%;
     }
 
-    
+
 
 }
