@@ -58,31 +58,34 @@ header {
 /* 메인 홈 */
 #home {
     width: 100%;
-    height: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: fit-content;
     background-color: rgb(31, 31, 31);
     color: #eee;
     text-align: center;
     background-image: url("../images/adobe/home.png");
     background-size: cover;
+    background-position: center;
 }
 
 #home h1 {
     font-size: 60px;
-    margin: 20px;
+    margin: 30px;
     font-weight: 600;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #home p {
+
+    color: rgb(218, 137, 137);
     font-size: 24px;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .resume {
-    padding: 12px 30px;
+    padding: 17px 30px;
     background-color: #409ee0;
     color: #0D1D39;
     text-decoration: none;
@@ -100,7 +103,6 @@ header {
 /* 이력서  */
 #resume {
     width: 100%;
-    margin: 20px;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -115,8 +117,8 @@ header {
 }
 
 .resume2-1 {
-    width: 30%;
-    height: 600px;
+    width: 20%;
+    height: 400px;
     background-color: #1d1d1f;
     display: flex;
     align-items: center;
@@ -125,23 +127,25 @@ header {
 
 
 .resume2-2 {
-    width: 67%;
-    height: 600px;
+    width: 80%;
+    height: 400px;
     padding: 20px 20px 20px 40px;
     text-align: left;
     background-color: #39393a;
     box-sizing: border-box;
-    font-size: 26px;
+    font-size: 16px;
     line-height: 1.6;
     overflow: hidden;
 }
 
 .resume2-2>p>span {
+    color: #949494;
     font-weight: bold;
+    font-size: 18px;
 }
 
 #resume3 {
-    width: 97%;
+    width: 100%;
     background-color: #39393a;
     margin-top: 20px;
     text-align: left;
@@ -312,6 +316,7 @@ footer {
     width: 500px;
     height: 700px;
 }
+
 .computer {
     position: absolute;
     left: 50%;
@@ -321,6 +326,7 @@ footer {
     width: 500px;
     height: 700px;
 }
+
 .gtqi {
     position: absolute;
     left: 50%;
@@ -330,6 +336,7 @@ footer {
     width: 500px;
     height: 700px;
 }
+
 .gtq {
     position: absolute;
     left: 50%;
@@ -341,10 +348,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    body{
+    body {
         width: 100%;
         box-sizing: border-box;
     }
+
     .nav {
         width: 100%;
         box-sizing: border-box;
@@ -356,32 +364,65 @@ footer {
 
     #home {
         width: 100%;
-        height: 600px;
+        height: fit-content;
         box-sizing: border-box;
+        background-image: url("../images/adobe/home.png");
+        background-size: cover;
+        background-position: center;
+
+
     }
 
     #home h1 {
+        height: fit-content;
         font-size: 40px;
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
     }
 
     #home p {
-        font-size: 16px;
+        color: rgb(218, 137, 137);
+        font-size: 15px;
     }
-    #resume{
+
+    #resume {
         width: 100%;
         box-sizing: border-box;
     }
+
+    #resume2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .resume2-1 {
+        background-color: #2f2f30;
+    }
+
     .resume2-1>img {
         width: 100%;
     }
 
     .resume2-2 {
-        padding-left: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        height: fit-content;
+
     }
 
     .resume2-2>p {
         font-size: 20px;
         line-height: 1.2;
+    }
+
+    #resume3 {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        height: fit-content;
     }
 
     section h2 {
@@ -395,15 +436,19 @@ footer {
     }
 
     #slide {
-        width: 92%;
-        height: 250px;
-        overflow: hidden;
+        width: 100%;
+        height: fit-content;
         margin-top: 150px;
-        box-sizing: border-box;
     }
 
-    .slide {
+
+    .slider {
+        height: fit-content;
+    }
+
+    .slide>img {
         width: 150px;
+        height: 150px;
     }
 
     #contact {
@@ -416,29 +461,34 @@ footer {
         width: 100%;
         box-sizing: border-box;
     }
+
     #project>img {
-        width: 80%;
-        height: auto;
-        object-fit: cover;
+        width: 85%;
+        height: fit-content;
+        object-fit: contain;
     }
-    #cake{
+
+    #cake {
         width: 100%;
         box-sizing: border-box;
     }
-    .cake1{
-        width: 50%;
+
+    .cake1 {
+        width: 45%;
     }
-    .cake2{
-        width: 50%;
+
+    .cake2 {
+        width: 55%;
         height: 520px;
         overflow: hidden;
     }
-    #about{
+
+    #about {
         position: relative;
         width: 100%;
         height: 100%;
     }
- 
+
     .web {
         position: absolute;
         left: 50%;
@@ -449,7 +499,7 @@ footer {
         width: 95%;
 
     }
-    
+
     .computer {
         position: absolute;
         left: 50%;
@@ -459,6 +509,7 @@ footer {
         width: 95%;
 
     }
+
     .gtqi {
         position: absolute;
         left: 50%;
@@ -469,6 +520,7 @@ footer {
         width: 95%;
 
     }
+
     .gtq {
         position: absolute;
         left: 50%;
@@ -478,5 +530,5 @@ footer {
         height: fit-content;
         width: 95%;
     }
-    
+
 }
