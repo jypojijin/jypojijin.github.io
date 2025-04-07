@@ -168,8 +168,8 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .slide-container {
     width:100%;
@@ -619,14 +619,9 @@ footer {
         box-sizing: border-box;
     }
 
-    #project>img {
-        width: 85%;
-        height: fit-content;
-        object-fit: contain;
-    }
-
     #cake {
         width: 100%;
+        overflow: hidden;
         box-sizing: border-box;
     }
 
@@ -637,7 +632,6 @@ footer {
     .cake2 {
         width: 60%;
         height: 520px;
-        overflow: hidden;
     }
 
     .cake3 {
