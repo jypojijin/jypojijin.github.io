@@ -168,6 +168,8 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .slide-container {
     width:100%;
