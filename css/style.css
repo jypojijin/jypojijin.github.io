@@ -171,26 +171,28 @@ header {
     box-sizing: border-box;
     overflow: hidden;
 }
+
 .slide-container {
-    width:100%;
+    width: 100%;
 }
-.slide-content{
+
+.slide-content {
     width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    
+
 }
 
-.image-section{
+.image-section {
     width: 50%;
     height: fit-content;
     cursor: pointer;
-    
+
 }
 
-.text-section{
+.text-section {
     width: 50%;
     box-sizing: border-box;
     text-align: center;
@@ -327,11 +329,32 @@ header {
 }
 
 .cake2 {
-    width: 70%;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
+    height: 520px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* 줄바꿈 방지 */
+    overflow-x: auto;
+    /* 화면 넘치면 스롤바 생김  */
+    gap: 10px;
+    /* 이미지 사이 여백 (선택사항) */
+    padding: 30px;
+    /* 스크롤 바 가리지 않게 패딩 (선택사항) */
 }
+
+
+.cake2 img {
+    flex: 0 0 auto;
+    /* 이미지 크기 자동, 줄바꿈 없이 유지 */
+    width: 100%;
+    /* 기본 너비 */
+    max-width: 100px;
+    /* 한 이미지의 최대 크기 */
+    height: auto;
+    /* 비율 유지 */
+    object-fit: cover;
+    /* 필요 시 이미지 꽉 차게 */
+}
+
 
 .cake2>ul>li>img:hover {
     transform-origin: 0 10;
@@ -422,7 +445,12 @@ footer {
     margin-bottom: 100px;
 }
 
-#about a {
+.a-wrap{
+    display: flex;
+    
+}
+
+.a-wrap>a {
     margin: 10px 30px;
     width: 300px;
     height: 420px;
@@ -430,7 +458,9 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .animate>a {
