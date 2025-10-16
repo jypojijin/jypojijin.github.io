@@ -1,0 +1,713 @@
+/* 기본 스타일 */
+* {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    font-family: 'Helvetica', 'San Francisco', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f30;
+    color: #dadadd;
+    line-height: 1.6;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+/* 헤더 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav nav ul li {
+    margin: 0 30px;
+}
+
+.nav nav ul li a {
+    text-decoration: none;
+    color: #242424;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.nav nav ul li a:hover {
+    color: #409ee0;
+    font-weight: bold;
+}
+
+/* 메인 홈 */
+#home {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(31, 31, 31);
+    color: #eee;
+    text-align: center;
+    background-image: url("../images/adobe/home.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#home h1 {
+    font-size: 60px;
+    margin: 30px;
+    font-weight: 600;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home p {
+
+    color: rgb(218, 137, 137);
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.resume {
+    padding: 17px 30px;
+    background-color: #409ee0;
+    color: #0D1D39;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resume:hover {
+    transform: scale(1.05);
+    background-color: #005bb5;
+    color: #eeeeee;
+}
+
+/* 이력서  */
+#resume {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#resume1>h2 {
+    margin: 10px 0;
+}
+
+#resume2 {
+    display: flex;
+    color: #eeeeee;
+}
+
+.resume2-1 {
+    width: 20%;
+    height: 400px;
+    background-color: #1d1d1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.resume2-2 {
+    width: 80%;
+    height: 400px;
+    padding: 20px 20px 20px 40px;
+    text-align: left;
+    background-color: #39393a;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.resume2-2>p>span {
+    color: #949494;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#resume3 {
+    width: 100%;
+    background-color: #39393a;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#resume3>p {
+    font-size: 20px;
+}
+
+/* 프로젝트 1 */
+#project {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#project>h2{
+    margin: 0;
+}
+
+
+
+.slide-container {
+    width:fit-content;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 30px auto;
+}
+
+.slide-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-container.active .slide-content {
+    transform: translateX(-50%);
+}
+
+.image-section {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.text-section{
+    display: none;
+    cursor: pointer;  
+    transition: transform 0.5s;
+    
+}
+.text-section img{
+    max-height: 400px;
+
+}
+.image-section img {
+    max-height: 400px;
+
+}
+.image-section1 {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.text-section1{
+    display: none;
+    cursor: pointer;  
+    transition: transform 0.5s;
+    
+}
+.text-section1 img{
+    max-height: 400px;
+
+}
+.image-section1 img {
+    max-height: 400px;
+
+}
+.image-section2 {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.text-section2{
+    display: none;
+    cursor: pointer;  
+    transition: transform 0.5s;
+    
+}
+.text-section2 img{
+    max-height: 400px;
+
+}
+.image-section2 img {
+    max-height: 400px;
+
+}
+
+/* 프로젝트 2 */
+
+
+.flip-card {
+    width: 80%;
+    height: 300px;
+    perspective: 1000px;
+    margin: 50px auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+
+.flip-card-front img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.flip-card-back img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+
+/* 케이크  */
+#cake {
+    width: 100%;
+    display: flex;
+}
+
+.cake1 {
+    width: 30%;
+}
+
+.cake2 {
+    width: 70%;
+    padding: 20px;
+   
+}
+.cake2>ul>li{
+ /* box-sizing: border-box; */
+    display: flex;        /* 가로 배치 */
+  flex-wrap: nowrap; 
+  gap: 10px;
+}
+.cake2>ul>li>img:hover {
+    transform-origin: 0 10;
+    transform: rotate(30deg);
+    transition: 0.1s;
+}
+
+/* 콘텐츠  */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* .animate {
+    opacity: 0.6;
+    transition: opacity 1s ease;
+} */
+
+/* 슬라이더 */
+#slide {
+    width: 100vw;
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 150px;
+    background-color: #1d1d1f;
+    box-sizing: border-box;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 4400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    /* transition: 0.5s ease; */
+    animation: slide 12s infinite linear;
+    box-sizing: border-box;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0%);
+    }
+
+    100% {
+        transform: translate(-33.3333%);
+    }
+}
+
+#slide>h2 {
+    text-align: center;
+}
+
+.slide {
+    margin: 0 10px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #1d1d1f;
+    color: #eee;
+    text-align: center;
+}
+
+/* 효과 */
+#about {
+    height: fit-content;
+    transition: 1s;
+    position: relative;
+}
+
+#about>h2 {
+    margin-bottom: 0px;
+}
+
+#about>p {
+    color: #808080;
+    margin-bottom: 100px;
+}
+
+#about a {
+    margin: 10px 30px;
+    width: 300px;
+    height: 420px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.animate>a {
+    color: #eee;
+}
+
+.animate>a>img:hover {
+    transform: scale(1.4);
+    transition: 0.5s;
+}
+
+
+#modal {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+.web {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 500px;
+    height: 700px;
+}
+
+.computer {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 500px;
+    height: 700px;
+}
+
+.gtqi {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 500px;
+    height: 700px;
+}
+
+.gtq {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 500px;
+    height: 700px;
+}
+
+.page{
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav>nav>ul>li {
+        margin: 0 10px;
+    }
+
+    #home {
+        width: 100%;
+        height: fit-content;
+        box-sizing: border-box;
+        background-image: url("../images/adobe/home.png");
+        background-size: cover;
+        background-position: center;
+
+
+    }
+
+    #home h1 {
+        height: fit-content;
+        font-size: 30px;
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
+    }
+
+    #home p {
+        color: rgb(218, 137, 137);
+        font-size: 15px;
+    }
+
+    #resume {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #resume1 {
+        display: block;
+    }
+
+    #resume2 {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .resume2-1 {
+        width: 90%;
+        margin: auto;
+        height: fit-content;
+        background-color: #2f2f30;
+    }
+
+    .resume2-1>img {
+        width: 80%;
+    }
+
+    .resume2-2 {
+        width: 100%;
+        margin: 20px auto;
+        box-sizing: border-box;
+        height: fit-content;
+
+    }
+
+    .resume2-2>p {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    #resume3 {
+        width: 100%;
+        box-sizing: border-box;
+        height: fit-content;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    #about {
+        width: 100%;
+        box-sizing: border-box;
+        height: fit-content;
+    }
+
+    #slide {
+        width: 100vw;
+        height: fit-content;
+        overflow: hidden;
+        margin-top: 150px;
+    }
+
+
+    .slider {
+        width: 4000px;
+        height: fit-content;
+    }
+
+    .slide>img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #contact {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    #project {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #cake {
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .cake1 {
+        width: 40%;
+    }
+
+    .cake2 {
+        width: 60%;
+        height: 520px;
+    }
+
+    .cake3 {
+        width: 100%;
+    }
+
+    #about {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .web {
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 95%;
+
+    }
+
+    .computer {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        z-index: 100;
+        height: fit-content;
+        width: 95%;
+
+    }
+
+    .gtqi {
+        position: absolute;
+        left: 50%;
+        bottom: 35%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 95%;
+
+    }
+
+    .gtq {
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        height: fit-content;
+        width: 95%;
+    }
+
+
+
+}
