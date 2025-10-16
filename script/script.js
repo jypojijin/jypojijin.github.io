@@ -223,4 +223,37 @@ $(function () {
     $(".text-section").click(function () {
         $(".text-section").css("display", "none")   
     })
+    $(".image-section1").click(function () {
+        $(".text-section1").css("display", "block")   
+    })
+    $(".text-section1").click(function () {
+        $(".text-section1").css("display", "none")   
+    })
+    $(".image-section2").click(function () {
+        $(".text-section2").css("display", "block")   
+    })
+    $(".text-section2").click(function () {
+        $(".text-section2").css("display", "none")   
+    })
 });
+document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('[data-page]');
+            const pages = document.querySelectorAll('.page');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // 모든 페이지 숨기기
+                    pages.forEach(page => page.classList.remove('active'));
+                    
+                    // 선택된 페이지만 보이기
+                    document.getElementById(targetPage).classList.add('active');
+                    
+                    // // 스크롤을 맨 위로 이동
+                    // window.scrollTo(0, 0);
+                });
+            });
+        });
